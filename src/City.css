@@ -1,0 +1,23 @@
+.City #city {
+  width: 18rem;
+  border: 2px solid #cfd3ce;
+  margin: 20px 30px;
+  padding-top: 30px;
+  margin-top: 40px;
+  margin-left: 30px;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 7px 7px 12px whitesmoke;
+}
+.City h1 {
+  margin-left: 30px;
+}
+.City h4 {
+  margin-left: 30px;
+}
+.City #name {
+  text-transform: capitalize;
+}
+.City #country {
+  text-transform: capitalize;
+}

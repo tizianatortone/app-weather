@@ -1,0 +1,57 @@
+.Main #picture {
+  background-color: transparent;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.Main #emoji {
+  width: 150px;
+  margin-left: 10px;
+}
+.Main #description {
+  margin-left: 15px;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 17px;
+}
+.Main #main {
+  border: 2px solid #cfd3ce;
+  margin: 20px 30px;
+  padding-top: 30px;
+  margin-top: 40px;
+  width: 18rem;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 7px 7px 12px whitesmoke;
+}
+.Main #today {
+  font-size: 50px;
+  text-align: center;
+}
+.Main #current-time {
+  font-size: 17px;
+  text-align: left;
+  margin-left: 10px;
+}
+.Main #extraInfo {
+  font-size: 13px;
+  text-align: left;
+  margin-left: 15px;
+}
+.Main .degrees {
+  font-size: 14px;
+}
+
+.Main #main .active {
+  color: black;
+}
+.Main #main .active:hover {
+  color: #1e78d4;
+  text-decoration: none;
+}

@@ -1,0 +1,43 @@
+.Search span {
+  margin-left: 30px;
+}
+.Search #change-city {
+  border: 1px solid #cfd3ce;
+  border-radius: 50px;
+  width: 50%;
+  height: 45px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px lightblue;
+  background: #fff;
+}
+.Search button.search {
+  padding: 10px;
+  border: 1px solid #cfd3ce;
+  border-radius: 35px;
+  background-color: transparent;
+  color: #03506f;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px lightblue;
+  transition: all 300ms ease-in-out;
+  display: inline;
+}
+.Search button.search:hover {
+  cursor: pointer;
+  background-color: #03506f;
+  color: lightblue;
+}
+
+.Search form {
+  display: inline;
+}
+.Search #standing {
+  color: #03506f;
+  font-size: 45px;
+  border: 0px;
+  background-color: transparent;
+  display: inline;
+}
+.Search #standing:hover {
+  cursor: pointer;
+  color: #9ad3bc;
+}

@@ -1,0 +1,22 @@
+.Forecast .card-group {
+  display: block;
+  margin-top: 40px;
+  margin-left: 150px;
+}
+.Forecast .card {
+  width: 140px;
+  box-shadow: 5px 5px 10px lightblue;
+  background: transparent;
+}
+.Forecast h6 {
+  margin: 8px 8px;
+}
+.Forecast h6 img {
+  height: 50px;
+  width: 51px;
+}
+.Forecast p {
+  font-size: 15px;
+  text-align: right;
+  padding-right: 7px;
+}
