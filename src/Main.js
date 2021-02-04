@@ -15,15 +15,15 @@ export default function Main() {
           <strong id="temperature">17</strong>
           <sup className="degrees">
             {" "}
-            <a href="#" target="_self" id="celsius-link" className="active">
+            <span href="#" target="_self" id="celsius-link" className="active">
               {" "}
               ºC{" "}
-            </a>{" "}
+            </span>{" "}
             |{" "}
-            <a href="#" target="_self" id="farenheit-link">
+            <span href="#" target="_self" id="farenheit-link">
               {" "}
               ºF
-            </a>{" "}
+            </span>{" "}
           </sup>
         </p>
         <p id="current-time">Saturday, 16 | 20:30</p>
