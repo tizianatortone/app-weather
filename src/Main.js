@@ -16,10 +16,6 @@ const [info, setInfo] = useState({});
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
-    let city= "Barcelona"
-    let apiKey = "afeb02ebfbea916785c99a1a7504a564";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
   }
 
   if (loaded) {
@@ -55,8 +51,7 @@ const [info, setInfo] = useState({});
     </div>
   ); } else { 
     const apiKey = "afeb02ebfbea916785c99a1a7504a564";
-    let city = "Barcelona"
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayWeather);
   
   }

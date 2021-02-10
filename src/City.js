@@ -12,10 +12,6 @@ export default function City() {
       name: response.data.name,
       country: response.data.sys.country,
     });
-    let city = "Barcelona"
-    let apiKey = "afeb02ebfbea916785c99a1a7504a564";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
   }
 
   if(loaded) {
