@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Date from "./Date";
 import "./Main.css";
 import axios from "axios";
 
@@ -21,10 +22,10 @@ const [info, setInfo] = useState({});
   if (loaded) {
   return (
     <div className="Main">
-      <div className="card" id="main">
+      <div className="card-main">
         <p className="Desc"> {info.description} </p>
-        <img src={info.icon} alt={""} />
-        <p id="today">
+        <img className="emoji" src={info.icon} alt={""} />
+        <p className="today">
           <strong id="temperature"> {Math.round(info.temperature)}</strong>
           <sup className="degrees">
             {" "}
@@ -39,8 +40,10 @@ const [info, setInfo] = useState({});
             </span>{" "}
           </sup>
         </p>
-        <p id="current-time">Saturday, 16 | 20:30</p>
-        <p id="extraInfo">
+        <span className="current-time">
+        <Date />
+        </span>
+        <p className="extraInfo">
           Min: {Math.round(info.min)}<span id="min"></span>º<br />
           Humidity: {info.humidity}%<span id="hum"></span>
           <br />
@@ -51,8 +54,8 @@ const [info, setInfo] = useState({});
     </div>
   ); } else { 
     const apiKey = "afeb02ebfbea916785c99a1a7504a564";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayWeather);
-  
-  }
+    
+  }return null;
 }

@@ -10,17 +10,17 @@
   border-radius: 10px;
   border: 1px solid gray;
 }
-.Main #emoji {
+.Main .emoji {
   width: 150px;
   margin-left: 10px;
 }
-.Main #description {
+.Main .Desc {
   margin-left: 15px;
   text-transform: capitalize;
   text-align: left;
   font-size: 17px;
 }
-.Main #main {
+.Main .card-main {
   border: 2px solid #cfd3ce;
   margin: 20px 30px;
   padding-top: 30px;
@@ -30,16 +30,16 @@
   background: transparent;
   box-shadow: 7px 7px 12px whitesmoke;
 }
-.Main #today {
+.Main .today {
   font-size: 50px;
   text-align: center;
 }
-.Main #current-time {
+.Main .current-time {
   font-size: 17px;
   text-align: left;
   margin-left: 10px;
 }
-.Main #extraInfo {
+.Main .extraInfo {
   font-size: 13px;
   text-align: left;
   margin-left: 15px;
@@ -48,10 +48,10 @@
   font-size: 14px;
 }
 
-.Main #main .active {
+.Main .main .active {
   color: black;
 }
-.Main #main .active:hover {
+.Main .main .active:hover {
   color: #1e78d4;
   text-decoration: none;
 }
