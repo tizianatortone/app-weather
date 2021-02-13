@@ -3,7 +3,7 @@ import Date from "./Date";
 import "./Info.css";
 
 
-export default function City(props) {
+export default function Info(props) {
 
   return (
     <div className="Info">
