@@ -1,7 +1,6 @@
 import React from "react";
 import Main from "./Main";
-import City from "./City";
-import Search from "./Search";
+import Info from "./Info";
 import Forecast from "./Forecast";
 import Github from "./Github";
 import './App.css';
@@ -14,9 +13,8 @@ export default function App() {
         <div className="card" id="picture">
           <div className="row">
             <div className="col-6">
-              <Main />
-              <City />
-              <Search />
+              <Main defaultCity="Barcelona" />
+              <Info />
             </div>
             <div className="col-6">
               <Forecast />
