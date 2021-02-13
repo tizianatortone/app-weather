@@ -1,18 +1,8 @@
 body {
   font-family: "Raleway", sans-serif;
 }
-.App .card {
-  width: 140px;
-  box-shadow: 5px 5px 10px lightblue;
-  background: transparent;
-}
-.App #picture {
-  background-image: linear-gradient(
-    to top,
-    #f3e7e9 0%,
-    #e3eeff 99%,
-    #e3eeff 100%
-  );
+
+.index #picture {
   width: 65%;
   height: 30%;
   padding: 20px;
