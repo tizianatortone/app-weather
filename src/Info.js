@@ -1,5 +1,6 @@
 import React from "react";
 import Date from "./Date";
+import WeatherTemp from "./WeatherTemp";
 import "./Info.css";
 
 
@@ -10,21 +11,7 @@ export default function Info(props) {
       <div className="card-weather">
         <p className="Desc"> {props.data.description} </p>
         <img className="emoji" src={props.data.icon} alt={""} />
-        <p className="today">
-          <strong className="temp"> {Math.round(props.data.temperature)}</strong>
-          <sup className="degrees">
-            {" "}
-            <span href="#" target="_self" id="celsius-link" className="active">
-              {" "}
-              ºC{" "}
-            </span>{" "}
-            |{" "}
-            <span href="#" target="_self" id="farenheit-link">
-              {" "}
-              ºF
-            </span>{" "}
-          </sup>
-        </p>
+        <WeatherTemp celsius={props.data.temperature}/>
         <span className="current-time">
         <Date />
         </span>
