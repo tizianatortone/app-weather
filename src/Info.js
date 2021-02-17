@@ -28,7 +28,7 @@ export default function Info(props) {
         <h1>{props.data.name}</h1>
         <h4>{props.data.country}</h4>
       </div>
-      </div>
-
+     
+ </div>
   );
 }

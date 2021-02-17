@@ -10,18 +10,12 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="card" id="picture">
-          <div className="row">
-            <div className="col-6">
               <Main defaultCity="Barcelona" />
             </div>
-            <div className="col-6">
-              <Forecast />
-            </div>
           </div>
-        </div>
         <Github />
       </div>
-    </div>
+
   );
 }
 

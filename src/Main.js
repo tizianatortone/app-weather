@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Info from "./Info";
+import Forecast from "./Forecast";
 import "./Main.css";
 import axios from "axios";
 
@@ -39,7 +40,10 @@ const [city, setCity] = useState(props.defaultCity);
 
   if (info.ready) {
   return (
-    <div className="Main">
+
+    <div className="row">
+        <div className="col-6">
+      <div className="Main">
  <Info data={info} />
  <div>
  <span>
@@ -76,6 +80,11 @@ const [city, setCity] = useState(props.defaultCity);
         </form>
       </span>
       </div>
+      </div>
+    <div className="col-6">
+ <Forecast city={info.name}/>
+      </div>
+    </div>
     </div>
   ); } else { 
     search()
