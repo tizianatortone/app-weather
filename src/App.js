@@ -1,6 +1,5 @@
 import React from "react";
 import Main from "./Main";
-import Forecast from "./Forecast";
 import Github from "./Github";
 import './App.css';
 

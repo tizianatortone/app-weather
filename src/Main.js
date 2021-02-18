@@ -81,11 +81,12 @@ const [city, setCity] = useState(props.defaultCity);
       </span>
       </div>
       </div>
+      </div>
     <div className="col-6">
  <Forecast city={info.name}/>
       </div>
     </div>
-    </div>
+    
   ); } else { 
     search()
   }return null;

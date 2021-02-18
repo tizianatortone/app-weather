@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ForecastDisplay from "./ForecastDisplay";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -11,53 +12,28 @@ setForecast(response.data)
  setLoaded(true);
   }
 
-  if (loaded){
-    return (
+  if (loaded && props.city === forecast.city.name){
+    return ( 
     <div className="Forecast">
-      <div className="col-6">
         <section className="card-group">
+          <ForecastDisplay data={forecast.list[0]} />
+          
+          <br />
           <div className="card">
-            <h6>
-              <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
-            </h6>
-            <p>
-              23:00 <br />
-              9ºC / 8ºC
-            </p>
+            <ForecastDisplay data={forecast.list[1]} />
+            
           </div>{" "}
           <br />
           <div className="card">
-            <h6>
-              <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" />
-            </h6>
-            <p>
-              02:00 <br />
-              8ºC / 8ºC
-            </p>
-          </div>{" "}
+            <ForecastDisplay data={forecast.list[2]} />
+            </div>
           <br />
           <div className="card">
-            <h6>
-              <img src="http://openweathermap.org/img/wn/02n@2x.png" alt="" />
-            </h6>
-            <p>
-              05:00 <br />
-              8ºC / 8ºC
-            </p>
-          </div>{" "}
-          <br />
-          <div className="card">
-            <h6>
-              <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" />
-            </h6>
-            <p>
-              08:00 <br />
-              7ºC / 7ºC
-            </p>
+            <ForecastDisplay data={forecast.list[3]} />
           </div>{" "}
         </section>
       </div>
-    </div>
+    
   );
   } else{
 let apiKey = "afeb02ebfbea916785c99a1a7504a564";
