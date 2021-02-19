@@ -9,12 +9,12 @@ export default function Info(props) {
   return (
     <div className="Info">
       <div className="card-weather">
-        <p className="Desc"> {props.data.description} </p>
-        <img className="emoji" src={props.data.icon} alt={""} />
+        
+        <img className="emoji" src={props.data.icon} alt={""} /><p  className="Desc"> <strong> {props.data.description} </strong> </p>
         <WeatherTemp celsius={props.data.temperature}/>
-        <span className="current-time">
         <Date />
-        </span>
+        <div className="h-divider">
+</div>
         <p className="extraInfo">
           Min: {Math.round(props.data.min)}º
           <br />

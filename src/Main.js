@@ -38,6 +38,20 @@ const [city, setCity] = useState(props.defaultCity);
    setCity(event.target.value)
   }
 
+  function Coordinates(position) {
+    const apiKey = "afeb02ebfbea916785c99a1a7504a564";
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    let geoApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+
+    axios.get(geoApiUrl).then(displayWeather);
+  }
+
+  function GeoLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(Coordinates);
+  }
+
   if (info.ready) {
   return (
 
@@ -55,6 +69,7 @@ const [city, setCity] = useState(props.defaultCity);
             class="bi bi-geo-alt"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
+            onClick={GeoLocation}
           >
             <path
               fillRule="evenodd"
@@ -75,6 +90,7 @@ const [city, setCity] = useState(props.defaultCity);
           />
           <button className="search" type="submit" value="search">
             {" "}
+            
             Search{" "}
           </button>
         </form>

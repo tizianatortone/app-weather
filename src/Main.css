@@ -16,40 +16,48 @@
 .Main .change-city {
   border: 1px solid #cfd3ce;
   border-radius: 50px;
-  width: 50%;
-  height: 45px;
+  width: 48%;
+  height: 35px;
   margin-bottom: 20px;
-  box-shadow: 5px 5px 10px lightblue;
   background: #fff;
 }
 .Main button.search {
-  padding: 10px;
+  padding: 6px;
   border: 1px solid #cfd3ce;
-  border-radius: 35px;
-  background-color: transparent;
+  border-radius: 38px;
+  background-color: #9ad3bc;
   color: #03506f;
   font-weight: bold;
-  box-shadow: 5px 5px 10px lightblue;
   transition: all 300ms ease-in-out;
   display: inline;
+  box-shadow: 1px 1px 3px lightblue;
+  margin-left: 5px;
 }
 .Main button.search:hover {
+  background-color: transparent;
+  color: #9ad3bc;
   cursor: pointer;
-  background-color: #03506f;
-  color: lightblue;
 }
 
 .Main form {
   display: inline;
 }
 .Main .standing {
-  color: #03506f;
+  color: #9ad3bc;
   font-size: 45px;
   border: 0px;
   background-color: transparent;
   display: inline;
+  transition: all 0.5s ease-in-out;
 }
 .Main .standing:hover {
   cursor: pointer;
-  color: #9ad3bc;
+  transform: scale(1.2) perspective(0.5px);
+}
+
+.Main .h-divider {
+  margin: 7px auto;
+  height: 1px;
+  width: 87%;
+  border-top: 1px solid gray;
 }

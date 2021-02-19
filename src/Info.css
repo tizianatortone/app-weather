@@ -4,14 +4,16 @@
   background: transparent;
 }
 .Info .emoji {
-  width: 150px;
-  margin-left: 10px;
+  width: 140px;
+  margin-left: 5px;
+  display: inline;
 }
 .Info .Desc {
-  margin-left: 15px;
+  margin-right: 5px;
   text-transform: capitalize;
   text-align: left;
   font-size: 17px;
+  display: inline;
 }
 .Info .card-weather {
   border: 2px solid #cfd3ce;
@@ -21,14 +23,11 @@
   width: 18rem;
   border-radius: 10px;
   background: transparent;
-  box-shadow: 7px 7px 12px whitesmoke;
+  box-shadow: 3px 3px 6px lightblue;
 }
-.Info .today {
-  font-size: 50px;
-  text-align: center;
-}
+
 .Info .current-time {
-  font-size: 17px;
+  font-size: 14px;
   text-align: left;
   margin-left: 10px;
 }
@@ -36,17 +35,6 @@
   font-size: 13px;
   text-align: left;
   margin-left: 15px;
-}
-.Info .degrees {
-  font-size: 14px;
-}
-
-.Info .main .active {
-  color: black;
-}
-.Info .main .active:hover {
-  color: #1e78d4;
-  text-decoration: none;
 }
 
 .Info .card-city {
@@ -58,7 +46,7 @@
   margin-left: 30px;
   border-radius: 10px;
   background: transparent;
-  box-shadow: 7px 7px 12px whitesmoke;
+  box-shadow: 3px 3px 6px lightblue;
 }
 .Info h1 {
   margin-left: 30px;
