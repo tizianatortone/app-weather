@@ -1,49 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ForecastDisplay from "./ForecastDisplay";
 import "./Forecast.css";
 
-export default function Forecast(props) {
-const [loaded, setLoaded] = useState(false);
-const [forecast, setForecast] = useState(null);
+export default function Forecast (props) {
+    const [loaded, setLoaded] = useState (false);
+    const [forecast, setForecast] = useState (null);
 
-function displayForecast(response) {
-setForecast(response.data)
- setLoaded(true);
-  }
+useEffect(()=>{
+  setLoaded(false)
+}, [props.coordinates])
 
-  if (loaded && props.city === forecast.city.name){
-    return ( 
-    <div className="Forecast">
-        <section>
-          <ForecastDisplay data={forecast.list[0]} />
-          
-          <div className="h-divider">
-</div>
-          <div>
-            <ForecastDisplay data={forecast.list[1]} />
+    function handleResponse (response){
+    setForecast(response.data.daily);
+     setLoaded(true);
+    }
+
+    function load(){
+      const apiKey= "afeb02ebfbea916785c99a1a7504a564";
+let longitude= props.coordinates.lon;
+let latitude= props.coordinates.lat;
+let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(handleResponse);
+    }
+    
+if(loaded) {
+    return (
+         <div className="Forecast">
+       <section>
+         {forecast.map(function (dailyForecast, index) {
+           if (index < 4){
+           return (
+          <div key={index}>
+            <ForecastDisplay data={dailyForecast} />
             
-          </div>{" "}
-           <div className="h-divider">
-</div>
-          <div>
-            <ForecastDisplay data={forecast.list[2]} />
-            </div>
-                  <div className="h-divider">
-</div>
-          <div>
-            <ForecastDisplay data={forecast.list[3]} />
-          </div>{" "}
+          </div>
+          
+           );
+           } else {
+             return null
+           }
+         })}
+
+
         </section>
       </div>
-    
-  );
-  } else{
-let apiKey = "afeb02ebfbea916785c99a1a7504a564";
-let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-  return null
-  }
+    );
 
+
+} else {
+
+load()
+
+return null
 }
-
+}

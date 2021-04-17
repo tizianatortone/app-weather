@@ -19,6 +19,7 @@ const [city, setCity] = useState(props.defaultCity);
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       name: response.data.name,
       country: response.data.sys.country,
+      coordinates: response.data.coord,
     });
   }
   function search(){
@@ -66,7 +67,7 @@ const [city, setCity] = useState(props.defaultCity);
             width="1em"
             height="1em"
             viewBox="0 0 16 16"
-            class="bi bi-geo-alt"
+            className="bi bi-geo-alt"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             onClick={GeoLocation}
@@ -99,7 +100,8 @@ const [city, setCity] = useState(props.defaultCity);
       </div>
       </div>
     <div className="col-6">
- <Forecast city={info.name}/>
+ <Forecast coordinates={info.coordinates}/>
+ 
       </div>
     </div>
     
